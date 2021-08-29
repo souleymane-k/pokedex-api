@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
- //const helmet = require('helmet')
+const helmet = require('helmet')
 const cors = require('cors')
 const POKEDEX = require('./pokedex.json')
 
@@ -10,7 +10,7 @@ const app = express();
 
 const morganSetting = process.env.NODE_ENV === 'production' ? 'tiny': 'common'
 app.use(morgan(morganSetting))
- //app.use(helmet())
+app.use(helmet())
 app.use(cors())
 
 app.use(function validateBearerToken(req, res, next) {
