@@ -5,7 +5,6 @@ const helmet = require('helmet')
 const cors = require('cors')
 const POKEDEX = require('./pokedex.json')
 
-
 const app = express();
 
 
