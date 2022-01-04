@@ -14,7 +14,7 @@ app.use(morgan(morganSetting))
 app.use(helmet())
 app.use(cors()) 
 
-// validator 
+// 
 app.use(function validateBearerToken(req, res, next) {
   const apiToken = process.env.API_TOKEN
   
